@@ -5,71 +5,6 @@ var adminmodel = require('../model/AdminModel');
 var bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
 
-// function validator(req,res,next){
-
-// usermodel.User.findOne({
-
-//  where:{email : req.body.lemail}
-// })
-// // use had already registered
-// .then(function(result){
-
-//  if (result != null){
-//          bcrypt.compare(req.body.lpassword, result.dataValues.password,
-//              function(err,res){
-//                  if(res){
-//                      next({"status":200,"message":"Valid User Login"});
-//                      return;
-//                  } 
-//                  if (err) {
-//                          next();
-//                  }
-//                  });
-
-
-
-//              }
-
-// // store the user's hash password obtained from database in a variable and pass it through req object
-// // req.userHashPassword = result.dataValues.password
-//  // next();
-
-// })
-// // err denotes the user was not found - > user was not registerd 
-// .catch(function(err){
-
-//  adminmodel.Admin.findOne({
-//  where:{email : req.body.lemail}
-// })
-
-// .then(function(result){
-
-//  if (result != null){
-//          bcrypt.compare(req.body.lpassword, result.dataValues.password,
-//              function(err,res){
-//                  if(res){
-//                      next({"status":201,"message":"Valid Admin Login"});
-//                      return;
-//                  } else {
-//                      next({"status":409,"message":"Credential didn't match"});
-//                  }
-//                  });
-
-//              }
-//              else{
-//                  next({"status":410,"message":"No Records"});    
-//              }
-
-
-
-// })
-// .catch(function(err){
-//  next({"status" :400,"message": "Please register first to login"})
-// })
-// })
-
-
-// }
 
 function checkUser(req, response, next) {
     // console.log('cjelajfds')
@@ -105,8 +40,7 @@ function checkUser(req, response, next) {
 }
 
 function checkAdmin(req, response, next) {
-    // if(req.user) return next();
-    // console.log('checkadmin')
+
     adminmodel.Admin.findOne({
             where: { email: req.body.lemail }
         })

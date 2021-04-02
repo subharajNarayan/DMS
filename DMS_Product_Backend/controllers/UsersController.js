@@ -5,34 +5,6 @@ const { check, validationResult, body } = require('express-validator');
 var saltRounds = 10; //hash type
 
 
-
-
-// var express = require('express');
-// var multer = require('multer');
-// var path = require('path');
-
-// var storage = multer.diskStorage({
-//     destination: './public/uploads',
-//     filename: (req, file, callback) => {
-//         let ext = path.extname(file.originalname);
-//         callback(null, file.fieldname + '-' + Date.now() + ext);
-//     }
-// });
-
-// var imageFileFilter = (req, file, cb) => {
-//     if (!file.originalname.match(/\.(jpg|jpeg|png|gif)$/)) {
-//         return cb(new Error('You can upload only image files!'), false);
-//     }
-//     cb(null, true);
-// };
-
-// var upload = multer({
-//     storage: storage,
-//     fileFilter: imageFileFilter,
-//     limits: { fileSize: 1000000 }
-// });
-
-
 //checking user email if they are already registered
 function emailValidator(req, res, next) {
     usermodel.User.findOne({
@@ -62,17 +34,6 @@ function passwordValidator(value) {
 
     throw new Error('Password confirmation does not match password');
 }
-
-
-
-
-
-
-
-
-
-
-
 
 //checking user email if they are already registered
 function validator(req, res, next) {

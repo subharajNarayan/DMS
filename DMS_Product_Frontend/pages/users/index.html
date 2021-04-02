@@ -1,15 +1,9 @@
-<!--
-User Profile Sidebar by @keenthemes
-A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
-Licensed under MIT
--->
 <!DOCTYPE html>
 <html>
 
 <head>
     <title></title>
     <link rel="stylesheet" href="../../assets/fonts/material-icon/css/material-design-iconic-font.min.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" type="text/css" href="../../resources/css/bootstrap.css">
     <link type="text/css" rel="stylesheet" href="../../resources/css/style.css" />
 </head>
@@ -49,11 +43,6 @@ Licensed under MIT
         <div class="row profile">
             <div class="col-md-3">
                 <div class="profile-sidebar">
-                    <!-- SIDEBAR USERPIC -->
-                    <!--  <div class="profile-userpic">
-          <img src="image.jpg" class="img-responsive" alt="">
-        </div> -->
-                    <!-- END SIDEBAR USERPIC -->
                     <!-- SIDEBAR USER TITLE -->
                     <div class="img-circle">
                         <div class="hovereffect" onclick="$('#ChangeProfile').click()">
@@ -164,13 +153,7 @@ Licensed under MIT
                             </tr>
                         </thead>
                         <tbody id="campaignList">
-                            <!--     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>  
-      <td><button type="button" id="edit" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary">Edit</button></td>
-      <td><button type="button" id="delete" class="btn btn-danger">Delete</button></td>
-</tr>    -->
+                           
                         </tbody>
                     </table>
                     <!-- Modal -->
@@ -207,7 +190,6 @@ Licensed under MIT
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
                                 </div>
                             </div>
                         </div>
@@ -254,121 +236,130 @@ Licensed under MIT
                     </table>
                 </div>
             </div>
-
-            <!-- User Profile -->
-            <div style="display: none;" id="userprofile" class="col-md-9">
-                <div class="profile-content">
-                    <h1>Profile</h1>
-                    <form method="POST" class="edituserprofile" id="edituserprofile" border="2px" style="border: 1px solid #555;border-radius: 10px;padding: 10px;margin-bottom: 10px;">
-                        <br>
-                        <div class="form-group ">
-                            <div class="input-group">
-                                <label for="fname"><i class="zmdi input-group-text zmdi-account material-icons-name"></i></label>
-                                <input class="form-control" type="text" required="" name="fname" id="fname" placeholder="Your First Name" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <label for="lname"><i class="zmdi input-group-text zmdi-account material-icons-name"></i></label>
-                                <input class="form-control" type="text" required="" name="lname" id="lname" placeholder="Your Last Name" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <label for="email"><i class="zmdi input-group-text zmdi-email"></i></label>
-                                <input class="form-control" disabled="" type="email" required="" name="email" id="email" placeholder="Your Email" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <label for="address"><i class="zmdi input-group-text zmdi-map"></i></label>
-                                <input class="form-control" type="text" required="" name="address" id="address" placeholder="Your Address" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <label><i class="zmdi input-group-text zmdi-map"></i></label>
-                                <select id="gender" class="form-control" id="sel1">
-                                    <option>--Not Specified--</option>
-                                    <option>Male</option>
-                                    <option>Female</option>
-                                    <option>Other</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <label for="country"><i class="zmdi input-group-text zmdi-map"></i></label>
-                                <input class="form-control" type="text" required="" name="country" id="country" placeholder="Your Country" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <label for="phone"><i class="zmdi input-group-text zmdi-map"></i></label>
-                                <input class="form-control" type="text" required="" name="phone" id="phone" placeholder="Your Phone" />
-                            </div>
-                        </div>
-                        <p id="message"></p>
-                        <div class="form-group form-button" style="margin-left: 60px">
-                            <button disabled="" type="submit" name="editprofile" id="editprofile" class="btn btn-info"> Save </button>
-                        </div>
-                    </form>
-                    <form method="POST" class="editpassword" id="editpassword" border="2px" style="border: 1px solid #555;border-radius: 10px;padding: 10px;">
-                        <h3>Change Password</h3>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <label for="pass"><i class="zmdi input-group-text zmdi-lock"></i></label>
-                                <input class="form-control" type="password" name="currentpassword" id="currentpassword" placeholder="Type your current password" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <label for="re-pass"><i class="zmdi input-group-text zmdi-lock-outline"></i></label>
-                                <input class="form-control" type="password" name="newpassword" id="newpassword" placeholder="Your new password" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <label for="re-pass"><i class="zmdi input-group-text zmdi-lock-outline"></i></label>
-                                <input class="form-control" type="password" name="retypepassword" id="retypepassword" placeholder="Re-type your password" />
-                            </div>
-                        </div>
-                        <p id="Pmessage"></p>
-                        <div class="form-group form-button" style="margin-left: 60px">
-                            <button disabled="" name="changepassword" id="changepassword" class="btn btn-info">Change Password</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <!-- User Profile -->
-            <div style="display: none;" id="userhelp" class="col-md-9">
-                <div class="profile-content">
-                    <h1>Help</h1>
-                    <form method="POST" class="myhelp" id="myhelp" border="2px" style="border: 1px solid #555;border-radius: 10px;padding: 10px;margin-bottom: 10px;">
-                        <br>
-                        <p>The military was mostly composed of white South Africans, who alone were subject to conscription.[17][18][19] However, Asians and Coloured citizens with mixed ancestry were eligible to serve as volunteers, several even attaining commissioned rank. From 1971 onwards several Black battalions were raised in the Infantry and Service Corps on a tribal basis, and most Black soldiers served in these exclusive tribal Battalions, which had Black NCOs but White commissioned officers. The first Black personnel were accepted into commissioned ranks only from 1986, and then only for serving Black soldiers and NCOs. The regular Commission would not be open for Bantus until 1991, and then again they would serve only in Black units or Support/Service Support units, to avoid having position of authority over White combat arms personnel.
-                        </p>
-                        <p>
-                            However, Black officer candidates from the various Homeland Forces and from South West Africa/SWATF had been accepted since 1981[20] Units such as the 32 Battalion incorporated many black volunteers from Angola.]</p>
-                        <p>
-                            However, Black officer candidates from the various Homeland Forces and from South West Africa/SWATF had been accepted since 1981[20] Units such as the 32 Battalion incorporated many black volunteers from Angola.[21] Conscription was opposed by organisations such as the End Conscription Campaign, but overall, white morale remained high—as indicated by the few recruits tried for serious disciplinary offences.[3]</p>
-                    </form>
-                </div>
-            </div>
+<!-- User Profile -->
+    <div style="display: none;" id="userprofile" class="col-md-9">
+        <div class="profile-content">
+            <h1>Profile</h1>
+                <form method="POST" class="edituserprofile" id="edituserprofile" border="2px" 
+                style="border: 1px solid #555;border-radius: 10px;padding: 10px;margin-bottom: 10px;">
+        <br>
+    <div class="form-group ">
+        <div class="input-group">
+            <label for="fname"><i class="zmdi input-group-text zmdi-account material-icons-name"></i></label>
+            <input class="form-control" type="text" required="" name="fname" id="fname" placeholder="Your First Name" />
         </div>
     </div>
+    <div class="form-group">
+        <div class="input-group">
+            <label for="lname"><i class="zmdi input-group-text zmdi-account material-icons-name"></i></label>
+            <input class="form-control" type="text" required="" name="lname" id="lname" placeholder="Your Last Name" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <label for="email"><i class="zmdi input-group-text zmdi-email"></i></label>
+            <input class="form-control" disabled="" type="email" required="" name="email" id="email" placeholder="Your Email" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <label for="address"><i class="zmdi input-group-text zmdi-map"></i></label>
+            <input class="form-control" type="text" required="" name="address" id="address" placeholder="Your Address" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <label><i class="zmdi input-group-text zmdi-map"></i></label>
+                <select id="gender" class="form-control" id="sel1">
+                    <option>--Not Specified--</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <label for="country"><i class="zmdi input-group-text zmdi-map"></i></label>
+            <input class="form-control" type="text" required="" name="country" id="country" placeholder="Your Country" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <label for="phone"><i class="zmdi input-group-text zmdi-map"></i></label>
+            <input class="form-control" type="text" required="" name="phone" id="phone" placeholder="Your Phone" />
+        </div>
+    </div>
+        <p id="message"></p>
+    <div class="form-group form-button" style="margin-left: 60px">
+        <button disabled="" type="submit" name="editprofile" id="editprofile" class="btn btn-info"> Save </button>
+    </div>
+    </form>
+    <form method="POST" class="editpassword" id="editpassword" border="2px" style="border: 1px solid #555;border-radius: 10px;padding: 10px;">
+        <h3>Change Password</h3>
+    <div class="form-group">
+        <div class="input-group">
+            <label for="pass"><i class="zmdi input-group-text zmdi-lock"></i></label>
+            <input class="form-control" type="password" name="currentpassword" id="currentpassword" placeholder="Type your current password" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <label for="re-pass"><i class="zmdi input-group-text zmdi-lock-outline"></i></label>
+            <input class="form-control" type="password" name="newpassword" id="newpassword" placeholder="Your new password" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <label for="re-pass"><i class="zmdi input-group-text zmdi-lock-outline"></i></label>
+            <input class="form-control" type="password" name="retypepassword" id="retypepassword" placeholder="Re-type your password" />
+        </div>
+    </div>
+    <p id="Pmessage"></p>
+    <div class="form-group form-button" style="margin-left: 60px">
+        <button disabled="" name="changepassword" id="changepassword" class="btn btn-info">Change Password</button>
+    </div>
+    </form>
+    </div>
+    </div>
+    <!-- User Profile -->
+    <div style="display: none;" id="userhelp" class="col-md-9">
+        <div class="profile-content">
+            <h1>Help</h1>
+        <form method="POST" class="myhelp" id="myhelp" border="2px" 
+        style="border: 1px solid #555;border-radius: 10px;padding: 10px;margin-bottom: 10px;">
+    <br>
+        <p>The military was mostly composed of white South Africans, who alone were subject 
+            to conscription.[17][18][19] However, Asians and Coloured citizens with mixed 
+            ancestry were eligible to serve as volunteers, several even attaining commissioned rank. 
+            From 1971 onwards several Black battalions were raised in the Infantry and Service Corps 
+            on a tribal basis, and most Black soldiers served in these exclusive tribal Battalions, 
+            which had Black NCOs but White commissioned officers. The first Black personnel were 
+            accepted into commissioned ranks only from 1986, and then only for serving Black soldiers 
+            and NCOs. The regular Commission would not be open for Bantus until 1991, and then again 
+            they would serve only in Black units or Support/Service Support units, to avoid having 
+            position of authority over White combat arms personnel.
+        </p>
+        <p>However, Black officer candidates from the various Homeland Forces and from South West 
+            Africa/SWATF had been accepted since 1981[20] Units such as the 32 Battalion incorporated 
+            many black volunteers from Angola.]</p>
+        <p>However, Black officer candidates from the various Homeland Forces and 
+            from South West Africa/SWATF had been accepted since 1981[20] Units such 
+            as the 32 Battalion incorporated many black volunteers from Angola.[21] 
+            Conscription was opposed by organisations such as the End Conscription Campaign, 
+            but overall, white morale remained high—as indicated by the few recruits tried 
+            for serious disciplinary offences.[3]</p>
+    </form>
+    </div>
+        </div>
+    </div>
+        </div>
     <br>
     <br>
     <!-- Modal -->
     <div class="modal fade" id="addNoteModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <!-- <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Your every note are safe with us</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div> -->
                 <div class="modal-body">
                     <form class="form-horizontal" id="addCampaign" method="POST">
                         <fieldset>
@@ -499,7 +490,7 @@ Licensed under MIT
             </div>
         </div>
     </div>
-        <!-- Model for requesting to stop campaign-->
+    <!-- Model for requesting to stop campaign-->
     <div class="modal fade" id="boostStop" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -560,7 +551,6 @@ Licensed under MIT
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
                 </div>
             </div>
         </div>

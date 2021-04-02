@@ -59,22 +59,6 @@ function stopBoostRequest(req, res, next) {
 }
 
 
-
-// function searchMyText(req,res){
-
-// 	textmodel.Text.findAll({
-// 		attributes: ['id', 'header', 'content','createdAt',"updatedAt"]
-// 	})
-// 		.then(function(result){
-// res.status(200);
-// res.json(result)
-// 	})
-// 	.catch(function(err){
-
-// 	})
-// }
-
-
 function findText(req, res) {
     textmodel.Text.findOne({
             where: { id: req.params.noteid }

@@ -160,7 +160,7 @@ $(document).ready(
 
 
 
-
+    //logout Profile
         $('#userlogout').click(function() {
             var isDelete = confirm("Are you sure?");
             if (isDelete == true) {

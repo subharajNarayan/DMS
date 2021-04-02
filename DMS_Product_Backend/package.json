@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arund21/DMS_Product_Backend.git"
+    "url": "git+https://github.com/subharajNarayan/DMS.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/arund21/DMS_Product_Backend/issues"
+    "url": "https://github.com/subharajNarayan/DMS/issues"
   },
-  "homepage": "https://github.com/arund21/DMS_Product_Backend#readme",
+  "homepage": "https://github.com/subharajNarayan/DMS#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "express": "^4.17.1",

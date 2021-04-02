@@ -252,12 +252,6 @@ application.post('/v1/text',
         })
     })
 
-//search text of particular user
-
-// application.get('/v1/text/:belongsto', authController.tokenVerify, textController.searchMyText, function(req, res) {
-//     res.status(200);
-
-// })
 
 //search all text
 application.get('/v1/text', authController.tokenVerify, textController.searchMyText, function (req, res) {

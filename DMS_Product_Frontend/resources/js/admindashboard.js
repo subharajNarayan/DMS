@@ -1,8 +1,6 @@
 $(document).ready(
     function() {
         userName();
-        // $('#adminprofile').hide();
-        // $('#userslist').hide();
 
         $('#editadminprofile').on('keyup', function() {
             $('#editprofile').prop('disabled', !1);

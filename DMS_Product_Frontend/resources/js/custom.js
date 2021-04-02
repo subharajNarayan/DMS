@@ -43,7 +43,6 @@ $(document).ready(
                         $('#message').html(errors.flat(1).join('. '));
                     }
                 }
-
             })
         }
 
@@ -63,7 +62,6 @@ $(document).ready(
                 lpassword: $('#lpassword').val()
             }
             $.ajax({
-
                 // v1 is the version , users is the route in backend 
                 url: 'http://localhost:3001/v1/auth',
                 method: 'POST',
@@ -135,12 +133,7 @@ if (checkToken!=null) {
             "authorization": 'bearer ' + checkToken
         }
     }).then(authUser => {
-/*
-        if (authUser.is_admin == 'true') {
-            location.href = './pages/admin/index.html';
-        } else {
-        	location.href = './pages/users/index.html';
-        }*/
+
 userName();
         $('section.signup,section.sign-in').hide()
         $('#userimage').show()
@@ -149,10 +142,6 @@ userName();
 
     });
 }
-
-
-
-
 
 });
 
