@@ -326,17 +326,6 @@ application.get('/image/:filename', function (request, response) {
 });
 
 
-
-// application.use(function(req, res, next) {
-
-//     // console.log(req);
-//     // console.log(err.message);
-//     res.status(200);
-//     res.send({ "message": req.message })
-
-
-// })
-
 application.listen(3001, async () => {
     // await sequelize.sync({ force: true });
     console.log('server started at 3001');
